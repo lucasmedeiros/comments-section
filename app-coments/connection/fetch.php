@@ -8,6 +8,6 @@ if (isset($_POST)) {
   }
 
   $arrayComentarios = $comentarioBase->listComentarios($limit);
-  $comentarioBase->printComentarios($arrayComentarios);
+  echo $comentarioBase->printComentarios($arrayComentarios);
 }
 ?>

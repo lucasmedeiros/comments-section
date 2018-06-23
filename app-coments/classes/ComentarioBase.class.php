@@ -34,16 +34,19 @@ class ComentarioBase {
   }
 
   public function printComentarios(array $comments) {
+    $out = "";
     if ($comments) {
       $size = sizeof($comments);
-      echo "<pre>exibindo $size comentários, do mais recente para o mais antigo.</pre>";
+      $out = $out . "<pre>exibindo $size comentários, do mais recente para o mais antigo.</pre>";
 
       foreach ($comments as $idComm => $comItem) {
-        echo "<h2>". $comItem['nome'] ." disse:</h2><p>". $comItem['conteudo'] ."</p>";
+        $out = $out . "<h2>" . $comItem['nome'] . " disse:</h2><p>" . $comItem['conteudo'] . "</p>";
       }
     } else {
-      echo "<pre>sem comentários cadastrados ainda.</pre>";
+      $out = $out . "<pre>sem comentários cadastrados ainda.</pre>";
     }
+
+    return $out;
   }
 }
 
