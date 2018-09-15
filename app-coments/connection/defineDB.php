@@ -4,7 +4,7 @@ function __autoload($classe) {
   require '../classes/' . $classe . '.class.php';
 }
 
-$mysql = new MySQLBase('localhost', 'root', 'mengo123', 'selecaoPET');
+$mysql = new MySQLBase('localhost', 'root', 'password', 'selecaoPET');
 /*
 * Mudar esses campos para testar com o seu próprio banco de dados:
 *
